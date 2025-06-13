@@ -1,5 +1,5 @@
 {
-    "name": "laravel/tinker",
+    "name": "covergenius/tinker",
     "description": "Powerful REPL for the Laravel framework.",
     "keywords": ["tinker", "repl", "psysh", "laravel"],
     "license": "MIT",
