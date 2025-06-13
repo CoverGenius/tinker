@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Tinker\Tests;
+namespace CoverGenius\Tinker\Tests;
 
 use Illuminate\Support\Collection;
-use Laravel\Tinker\TinkerCaster;
+use CoverGenius\Tinker\TinkerCaster;
 use PHPUnit\Framework\TestCase;
 
 class TinkerCasterTest extends TestCase

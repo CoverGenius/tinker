@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Tinker;
+namespace CoverGenius\Tinker;
 
 use Illuminate\Support\Str;
 use Psy\Shell;
