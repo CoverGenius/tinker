@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Tinker\\": "src/"
+            "CoverGenius\\Tinker\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravel\\Tinker\\Tests\\": "tests/",
+            "CoverGenius\\Tinker\\Tests\\": "tests/",
             "App\\": "tests/fixtures/app",
             "One\\Two\\": "tests/fixtures/vendor/one/two"
         }
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laravel\\Tinker\\TinkerServiceProvider"
+                "CoverGenius\\Tinker\\TinkerServiceProvider"
             ]
         }
     },

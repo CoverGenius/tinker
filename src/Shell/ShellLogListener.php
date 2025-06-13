@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Tinker\Shell;
+namespace CoverGenius\Tinker\Shell;
 
 use Psy\ExecutionLoop\AbstractListener;
 use Psy\Shell;

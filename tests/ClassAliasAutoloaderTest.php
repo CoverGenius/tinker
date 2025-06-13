@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\Tinker\Tests;
+namespace CoverGenius\Tinker\Tests;
 
-use Laravel\Tinker\ClassAliasAutoloader;
+use CoverGenius\Tinker\ClassAliasAutoloader;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use Psy\Shell;

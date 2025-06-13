@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravel\Tinker\Console;
+namespace CoverGenius\Tinker\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Env;
-use Laravel\Tinker\ClassAliasAutoloader;
-use Laravel\Tinker\Shell\CustomShell;
+use CoverGenius\Tinker\ClassAliasAutoloader;
+use CoverGenius\Tinker\Shell\CustomShell;
 use Psy\Configuration;
 use Psy\VersionUpdater\Checker;
 use Symfony\Component\Console\Input\InputArgument;

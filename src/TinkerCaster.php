@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Tinker;
+namespace CoverGenius\Tinker;
 
 use Exception;
 use Symfony\Component\VarDumper\Caster\Caster;
