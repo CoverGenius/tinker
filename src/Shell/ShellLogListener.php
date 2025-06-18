@@ -13,6 +13,11 @@ class ShellLogListener extends AbstractListener
      */
     protected ?CodeExecutionLogger $logger;
 
+    public function __construct()
+    {
+        $this->logger = new CodeExecutionLogger();
+    }
+
     /**
      * Listen for code execution.
      *
@@ -22,11 +27,7 @@ class ShellLogListener extends AbstractListener
      */
     public function onExecute(Shell $shell, string $code): void
     {
-        if ($this->logger instanceof CodeExecutionLogger) {
-            $this->logger->addToLog($code);
-        } else {
-            $this->logger = CodeExecutionLogger::startLog($code);
-        }
+        $this->logger->addToLog($code);
     }
 
     /**
@@ -40,7 +41,7 @@ class ShellLogListener extends AbstractListener
     }
 
     /**
-     * Commits the log if the logger has been initialized.
+     * Commits the log
      *
      * This ensures that the log is always saved, even if the shell is exited
      * or the process is terminated.
@@ -49,8 +50,6 @@ class ShellLogListener extends AbstractListener
      */
     public function __destruct()
     {
-        if ($this->logger instanceof CodeExecutionLogger) {
-            $this->logger->commitLog();;
-        }
+        $this->logger->commitLog();
     }
 }
