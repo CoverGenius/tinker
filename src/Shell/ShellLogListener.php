@@ -10,22 +10,27 @@ class ShellLogListener extends AbstractListener
     /**
      * Listen for code execution.
      *
-     * @param  \Psy\Shell  $shell
-     * @param  string  $code
+     * @param Shell $shell the shell instance
+     * @param  string  $code the code from psy that we want to log
      * @return void
      */
-    public function onExecute(Shell $shell, $code)
+    public function onExecute(Shell $shell, string $code): void
     {
-        \Log::debug('Tinker session code run', ['code' => $code]);
+        \Covergenius\Php\Logger\Resources\ArbitraryDataLogger::log([
+            'source' => 'tinker',
+            'code' => $code
+        ]);
     }
 
     /**
      * Determines if this log listener is supported.
      *
+     * currently we check if php-logger class for arbitrary data logging exists
+     *
      * @return bool
      */
     public static function isSupported(): bool
     {
-        return true; //implement a proper check
+        return class_exists('\Covergenius\Php\Logger\Resources\ArbitraryDataLogger');
     }
 }
